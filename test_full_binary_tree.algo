@@ -1,0 +1,12 @@
+FUNCTION isFullBinaryTree(root: ^BST) : BOOLEAN
+VAR
+    valide : BOOLEAN = TRUE;
+BEGIN
+    IF (root == NULL) THEN
+        RETURN FALSE;
+    ELSE if(root^.RC = NULL AND root^.RC = NULL) THEN
+        RETURN TRUE;    
+    ELSE if(root^.RC != NULL AND root^.LC != NULL) THEN
+        RETURN  isFullBinaryTree(root^.RC) AND isFullBinaryTree(root^.LC)
+    END_IF
+END

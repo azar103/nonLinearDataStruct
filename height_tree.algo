@@ -1,0 +1,22 @@
+
+FUNCTION height_tree(root :^BST) : INTEGER
+BEGIN
+    IF (root = NULL) THEN
+        return -1;
+
+    ELSE
+    RETURN max(height_tree(root^RC), height_tree(roo^LEFT)) + 1
+    END_IF
+
+END
+
+
+FUNCTION MAX(x: INTEGER, y:INTEGER) : return_type
+
+BEGIN
+    IF (x > y) THEN
+        return x;
+    ELSE
+        return y;
+    END_IF
+END

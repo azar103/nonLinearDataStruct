@@ -1,0 +1,12 @@
+FUNCTION findMax(root: ^BST) : INTEGER
+
+BEGIN
+    IF (root = NULL) THEN
+        RETURN 0;
+    ELSE_IF   (root^.RC = NULL) THEN
+        RETURN root^.VAL;
+    ELSE
+        RETURN findMax(root^.RC);
+    END_IF
+
+END

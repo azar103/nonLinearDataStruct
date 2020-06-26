@@ -1,0 +1,15 @@
+FUNCTION count_leavs(root: ^BST) : INTEGER
+VAR
+    leavsLeft: INTEGER;
+    leavsRight:INTEGER;
+BEGIN
+    IF (root = NULL) THEN
+        RETURN 0;
+    ELSE_IF (root^.RC = NULL AND root^.LC = NULL) THEN
+        RETURN 1;
+    ELSE
+        leavsLeft := count_leavs(root^.LC);
+        leavsRight := count_leavs(root^.RC);
+        RETURN leavsLeft + leavsRight;
+    END_IF
+END

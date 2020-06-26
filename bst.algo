@@ -1,0 +1,5 @@
+BST :STRUCT
+                VAL : INTEGER;
+                LC : ^BST; 
+                RC : ^BST;
+            END_STRUCT
